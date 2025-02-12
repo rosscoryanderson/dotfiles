@@ -33,8 +33,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-                "gopls",
-                "tsserver",               
+                -- "gopls",
+                "tsserver",
                 "jsonls",
                 "sqlls",
                 "yamlls",
@@ -45,7 +45,7 @@ return {
                 "marksman",
                 "lexical",
                 "graphql",
-                "grammarly",               
+                "grammarly",
                 "eslint",
             },
             handlers = {

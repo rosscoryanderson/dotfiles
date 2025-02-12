@@ -37,6 +37,11 @@ fzf
 brew install fzf
 ```
 
+fd
+```
+brew install fd
+```
+
 ## Setup dotfiles
 ```
 cd ~/.dotfiles
