@@ -3,11 +3,21 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-        -- vim.cmd.colorscheme = "catppuccin"
         vim.cmd("colorscheme catppuccin")
         require("catppuccin").setup({
-            flavour = "macchiato",
-            no_italic = true
+            flavour = "mocha",
+            no_italic = true,
+            transparent_background = true,
+            default_integrations = true,
+            integrations = {
+                nvimtree = true,
+                treesitter = true,
+                notify = true,
+                mini = {
+                    enabled = true,
+                    indentscope_color = "",
+                }
+            }
         })
     end
 }

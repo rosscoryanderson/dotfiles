@@ -2,15 +2,37 @@ return {
     'akinsho/bufferline.nvim',
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
+    -- opts = {
+    --     offsets = {
+    --         {
+    --             filetype = "NvimTree",
+    --             text = "Nvim Tree",
+    --             separator = true,
+    --             text_align = "left"
+    --         }
+    --     },
+    -- },
     config = function()
+        vim.keymap.set("n", "<space>bp", "<cmd>BufferLinePick<CR>", {
+            desc = "pick a buffer",
+        })
+
         require("bufferline").setup({
-            offsets = {
-                {
-                    filetype = "NvimTree",
-                    text = "File Explorer",
-                    highlight = "Directory",
-                    separator = true -- use a "true" to enable the default, or set your own character
-                }
+            options = {
+                offsets = {
+                    {
+                        filetype = "snacks_layout_box",
+                        text = "Explorer",
+                        separator = true,
+                        text_align = "left",
+                        highlight = "Directory"
+                    }
+                },
+                diagnostics = "nvim_lsp",
+                separator_style = { "", "" },
+                modified_icon = '●',
+                show_close_icon = true,
+                show_buffer_close_icons = false,
             }
         })
     end

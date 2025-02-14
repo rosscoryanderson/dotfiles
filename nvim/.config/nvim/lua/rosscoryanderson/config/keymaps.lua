@@ -21,10 +21,10 @@ vim.keymap.set("n", "<leader>k", ":m .-2<CR>==")
 vim.keymap.set("n", "<leader>j", ":m .+1<CR>==")
 
 -- telescope
-vim.keymap.set("n", "<Leader>ff", "<cmd>Telescope find_files<cr>")
-vim.keymap.set("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>")
-vim.keymap.set("n", "<Leader>fb", "<cmd>Telescope buffers<cr>")
-vim.keymap.set("n", "<Leader>fr", "<cmd>Telescope bibtex<cr>")
+-- vim.keymap.set("n", "<Leader>ff", "<cmd>Telescope find_files<cr>")
+-- vim.keymap.set("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>")
+-- vim.keymap.set("n", "<Leader>fb", "<cmd>Telescope buffers<cr>")
+-- vim.keymap.set("n", "<Leader>fr", "<cmd>Telescope bibtex<cr>")
 
 --- quicklist
 vim.keymap.set("n", "<leader>qn", "<cmd>:cnext<cr>")
@@ -74,7 +74,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "jj", "<Esc>")
 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>fo", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<leader>d", "yyp")
 

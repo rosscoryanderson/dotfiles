@@ -34,7 +34,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 -- "gopls",
-                "tsserver",
+                -- "tsserver",
                 "jsonls",
                 "sqlls",
                 "yamlls",
