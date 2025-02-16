@@ -16,8 +16,10 @@ bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
 
 eval "$(starship init zsh)"
+eval "$(tmuxifier init -)"
 
 alias gs="git status"
-# alias ga="git add ."
+alias ga="git add ."
 alias lg="lazygit"
 alias gl="git log"
+alias gc="git commit -m"
