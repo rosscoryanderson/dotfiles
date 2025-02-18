@@ -1,31 +1,19 @@
-#!/bin/bash
-# SESSION=$USER
-# DIR='~/dev/node'
-
 if [[ -z $1  ]]; then
   SESSION=$USER
-  DIR='~/dev/node'
 else
   SESSION=$1
-  DIR="~/dev/node/$1"
-  if [[ ! -d "$DIR" ]]; then 
-    mkdir "$DIR"
-  fi
 fi
 
 
-cd "$DIR"
-
 set -- $(stty size)
-tmux -2 new-session -d -s $SESSION -x "$2" -y "$(($1 - 1))"
+tmux -2 new-session -d -s $SESSION -x "$(($2 - 1))" -y "$(($1 - 1))"
+# tmux -2 new-session -d -s $SESSION -x "$2" -y "$(($1 - 1))"
 
 
 tmux new-window -t $SESSION:1 -n 'Main'
-# m .
 
 tmux split-window -h
 tmux split-window -v
-tmux set -g pane-border-format "#{pane_index} #{pane_current_command}"
 tmux split-window -v
 tmux select-pane -t 0
 tmux split-window -v
@@ -39,6 +27,23 @@ tmux resize-pane -Dt 4 1
 tmux send-keys -t 0 'nvim .' C-m
 tmux send-keys -t 1 'git pull' C-m
 tmux send-keys -t 3 'lazygit' C-m
+
+# # Set default window
+tmux select-window -t $SESSION:1
+
+# Attach to session
+tmux -2 attach-session -t $SESSION
+
+
+#!/bin/bash
+# SESSION=$USER
+# DIR='~/dev/node'
+# DIR='~/dev/node'
+# DIR="~/dev/node/$1"
+# if [[ ! -d "$DIR" ]]; then 
+#   mkdir "$DIR"
+# fi
+# cd "$DIR"
 # tmux resize-pane -Dt 1 6 
 # tmux resize-pane -Rt 0 20 
 # tmux resize-pane -Ut 2 3 
@@ -82,10 +87,4 @@ tmux send-keys -t 3 'lazygit' C-m
 # tmux resize-pane -U 7
 # tmux send-keys 'watch -n1 ${HOME}/bin/gpu_sensors.sh' C-m
 
-
-# # Set default window
-tmux select-window -t $SESSION:1
-
-# Attach to session
-tmux -2 attach-session -t $SESSION
 
