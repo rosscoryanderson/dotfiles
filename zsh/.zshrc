@@ -25,4 +25,9 @@ alias gc="git commit -m"
 
 alias lg="lazygit"
 
-alias tm="tmux attach"
+alias tm="~/.dotfiles/tools/default_layout.sh"
+alias tml="~/.dotfiles/tools/default_layout_init.sh"
+
+alias docker="colima"
+
+
