@@ -16,7 +16,6 @@ bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
 
 eval "$(starship init zsh)"
-# eval "$(tmuxifier init -)"
 
 alias gs="git status"
 alias ga="git add ."
