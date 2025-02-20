@@ -22,11 +22,15 @@ alias ga="git add ."
 alias gl="git log"
 alias gc="git commit -m"
 
+alias ghsw="gh auth switch"
+
 alias lg="lazygit"
 
-alias tm="~/.dotfiles/tools/default_layout.sh"
+alias tmn="~/.dotfiles/tools/default_layout.sh"
 alias tml="~/.dotfiles/tools/default_layout_init.sh"
+alias tm="tmux attach"
 
 alias docker="colima"
 
-
+PSQL_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
+PATH="$PATH:$PSQL_PATH"

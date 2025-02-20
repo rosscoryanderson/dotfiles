@@ -2,16 +2,6 @@ return {
     'akinsho/bufferline.nvim',
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
-    -- opts = {
-    --     offsets = {
-    --         {
-    --             filetype = "NvimTree",
-    --             text = "Nvim Tree",
-    --             separator = true,
-    --             text_align = "left"
-    --         }
-    --     },
-    -- },
     config = function()
         vim.keymap.set("n", "<space>bp", "<cmd>BufferLinePick<CR>", {
             desc = "pick a buffer",
@@ -31,8 +21,8 @@ return {
                 diagnostics = "nvim_lsp",
                 separator_style = { "", "" },
                 modified_icon = '●',
-                show_close_icon = false,
-                show_buffer_close_icons = false,
+                -- show_close_icon = false,
+                -- show_buffer_close_icons = false,
             }
         })
     end

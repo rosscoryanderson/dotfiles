@@ -29,10 +29,7 @@ return {
             return Snacks.git.get_root() ~= nil
           end,
           cmd = "git status --short --branch --renames",
-          height = 5,
-          padding = 1,
           ttl = 5 * 60,
-          indent = 3,
         },
         { section = "startup" },
       },
@@ -40,11 +37,8 @@ return {
     explorer = {
       enabled = true,
       replace_netrw = true,
-      filtered_items = {
-        visible = true,
-        hide_dotfiles = false,
-        hide_gitignored = true,
-      },
+      hidden = true,
+      ignored = true,
     },
     indent = { enabled = true },
     input = { enabled = true },
@@ -52,7 +46,21 @@ return {
       enabled = true,
       timeout = 3000,
     },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      files = {
+        ignored = true,
+        hidden = true
+      },
+      sources = {
+        explorer = {
+          layout = {
+            preset = "sidebar",
+            preview = true
+          },
+        }
+      }
+    },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },
@@ -167,7 +175,7 @@ return {
         _G.bt = function()
           Snacks.debug.backtrace()
         end
-        vim.print = _G.dd         -- Override print to use snacks for `:=` command
+        vim.print = _G.dd -- Override print to use snacks for `:=` command
 
         -- Create some toggle mappings
         Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
