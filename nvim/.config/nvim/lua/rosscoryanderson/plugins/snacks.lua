@@ -37,8 +37,8 @@ return {
     explorer = {
       enabled = true,
       replace_netrw = true,
-      hidden = true,
-      ignored = true,
+      -- hidden = true,
+      -- ignored = true,
     },
     indent = { enabled = true },
     input = { enabled = true },
@@ -48,10 +48,6 @@ return {
     },
     picker = {
       enabled = true,
-      files = {
-        ignored = true,
-        hidden = true
-      },
       sources = {
         explorer = {
           layout = {
