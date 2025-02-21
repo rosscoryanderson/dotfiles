@@ -34,3 +34,5 @@ alias docker="colima"
 
 PSQL_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 PATH="$PATH:$PSQL_PATH"
+
+alias pn="npx pnpm@9.15.4"
