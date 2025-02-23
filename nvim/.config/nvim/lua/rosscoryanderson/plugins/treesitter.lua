@@ -20,6 +20,8 @@ return {
                 "svelte",
                 "swift",
                 "typescript",
+                "javascript",
+                "elixir"
             },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -30,9 +32,9 @@ return {
             auto_install = true,
 
             -- List of parsers to ignore installing (or "all")
-            ignore_install = { "javascript" },
+            -- ignore_install = { "javascript" },
 
-                additional_vim_regex_highlighting = false,
+            additional_vim_regex_highlighting = true,
         }
     end
 }
