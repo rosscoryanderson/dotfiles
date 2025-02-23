@@ -26,6 +26,10 @@ vim.keymap.set("n", "<leader>j", ":m .+1<CR>==")
 -- vim.keymap.set("n", "<Leader>fb", "<cmd>Telescope buffers<cr>")
 -- vim.keymap.set("n", "<Leader>fr", "<cmd>Telescope bibtex<cr>")
 
+-- function navigation
+vim.keymap.set("n", "<leader>h", "ci{")
+vim.keymap.set("n", "<leader>l", "ci(")
+
 --- quicklist
 vim.keymap.set("n", "<leader>qn", "<cmd>:cnext<cr>")
 vim.keymap.set("n", "<leader>qp", "<cmd>:cprev<cr>")
@@ -90,3 +94,5 @@ vim.keymap.set("x", '*', [[:s/\%V\(.*\)\%V/*\1*/ <CR>]], { desc = "Surround sele
 vim.keymap.set("n", '<leader>s*', [[:s/\<<C-r><C-w>\>/*<C-r><C-w>\*/ <CR>]], { desc = "Surround word with *" })
 vim.keymap.set("n", '<leader>s"', [[:s/\<<C-r><C-w>\>/"<C-r><C-w>\"/ <CR>]], { desc = 'Surround word with "' })
 vim.keymap.set("n", "<leader>s'", [[:s/\<<C-r><C-w>\>/'<C-r><C-w>\'/ <CR>]], { desc = "Surround word with '" })
+
+
