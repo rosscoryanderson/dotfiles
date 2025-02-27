@@ -1,11 +1,30 @@
+local excluded = {
+  'node_modules/',
+  'dist/',
+  '.next/',
+  '.vite/',
+  '.git/',
+  '.gitlab/',
+  'build/',
+  'target/',
+  'dadbod_ui/tmp/',
+  'dadbod_ui/dev/',
+
+  'package-lock.json',
+  'pnpm-lock.yaml',
+  'yarn.lock',
+  '.DS_Store',
+  '*.bak/',
+}
+
 return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
   ---@module "snacks"
-  -- -@type snacks.Config
   opts = {
     bigfile = { enabled = true },
+    bufdelete = { enabled = true },
     dashboard = {
       sections = {
         { section = 'header' },
@@ -36,6 +55,7 @@ return {
     explorer = {
       enabled = true,
       replace_netrw = true,
+      hidden = true,
     },
     indent = { enabled = true },
     input = { enabled = true },
@@ -45,12 +65,20 @@ return {
     },
     picker = {
       enabled = true,
+      hidden = true,
+      ignored = true,
+      exclude = excluded,
       sources = {
         explorer = {
           layout = {
             preset = 'sidebar',
             preview = true,
           },
+        },
+        files = {
+          hidden = true,
+          ignored = true,
+          exclude = excluded,
         },
       },
     },
