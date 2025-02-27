@@ -25,8 +25,8 @@ tmux resize-pane -Ut 2 21
 tmux resize-pane -Dt 4 1 
 
 tmux send-keys -t 0 'nvim .' C-m
-tmux send-keys -t 1 'git pull' C-m
 tmux send-keys -t 3 'lazygit' C-m
+# tmux send-keys -t 1 'git pull' C-m
 
 # # Set default window
 tmux select-window -t $SESSION:1
