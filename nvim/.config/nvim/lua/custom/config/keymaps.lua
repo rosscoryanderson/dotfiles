@@ -26,9 +26,16 @@ vim.keymap.set('n', '<leader>j', ':m .+1<CR>==')
 -- vim.keymap.set("n", "<Leader>fb", "<cmd>Telescope buffers<cr>")
 -- vim.keymap.set("n", "<Leader>fr", "<cmd>Telescope bibtex<cr>")
 
--- function navigation
-vim.keymap.set('n', '<leader>h', 'ci{')
-vim.keymap.set('n', '<leader>l', 'ci(')
+-- Change values in brackets
+vim.keymap.set('n', '<leader>{', 'ci{')
+vim.keymap.set('n', '<leader>}', 'ci{')
+vim.keymap.set('n', '<leader>(', 'ci(')
+vim.keymap.set('n', '<leader>)', 'ci(')
+vim.keymap.set('n', '<leader>[', 'ci[')
+vim.keymap.set('n', '<leader>]', 'ci[')
+vim.keymap.set('n', "<leader>'", "ci'")
+vim.keymap.set('n', '<leader><', 'ci<')
+vim.keymap.set('n', '<leader>>', 'ci>')
 
 --- quicklist
 vim.keymap.set('n', '<leader>qn', '<cmd>:cnext<cr>')
@@ -66,6 +73,7 @@ end)
 
 -- greatest remap ever
 vim.keymap.set('x', '<leader>p', [["_dP]])
+vim.keymap.set('n', '<leader>po', [[viw"_dP]])
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
@@ -99,3 +107,15 @@ vim.keymap.set('n', 'go', 'o<ESC>', { desc = 'Insert new line below' })
 vim.keymap.set('n', '<Enter>', 'o<ESC>', { desc = 'Insert new line below' })
 vim.keymap.set('n', 'gO', 'O<ESC>', { desc = 'Insert new line above' })
 vim.keymap.set('n', '<S-Enter>', 'O<ESC>', { desc = 'Insert new line above' })
+
+-- Further ways to save and close files that my muscle memory goes to
+vim.keymap.set('c', 'W', ':w<CR>', { desc = 'Save current buffer' })
+vim.keymap.set('c', 'Q', ':q<CR>', { desc = 'Close current buffer' })
+vim.keymap.set('i', ':W', '<Esc>:w<CR>', { desc = 'Save current buffer' })
+
+-- Moving across the line
+vim.keymap.set({ 'n', 'v' }, 'H', '^', { desc = 'Move to front of first character on line' })
+vim.keymap.set({ 'n', 'v' }, 'L', 'g_', { desc = 'Move to front of last character on line' })
+
+-- vim.keymap.set('n', '<leader>h', 'ci{')
+-- vim.keymap.set('n', '<leader>l', 'ci(')

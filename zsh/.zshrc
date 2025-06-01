@@ -36,7 +36,7 @@ alias tmd="tmux resizep -D"
 alias tmu="tmux resizep -U"
 alias tmr="tmux resizep -R"
 
-alias docker="colima"
+# alias docker="colima"
 
 PSQL_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 PATH="$PATH:$PSQL_PATH"
@@ -49,3 +49,25 @@ alias lst="eza --color=always --long --git --icons=always --no-user --no-time --
 BAT_THEME="OneHalfDark"
 alias lsf="fzf --preview 'bat --style=numbers --color=always {}'"
 
+alias sshp="ssh-add ~/.ssh/id_ed25519"
+alias sshw="ssh-add ~/.ssh/id_ed25519_work"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/rossanderson/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# bun completions
+[ -s "/Users/rossanderson/.bun/_bun" ] && source "/Users/rossanderson/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+### WANEWS ###
+eval "$(jenv init -)"
+eval "$(rbenv init -)"
+export ANDROID_HOME=~/Library/Android/sdk
+### WANEWS ###
+
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
