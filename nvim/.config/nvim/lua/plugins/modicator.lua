@@ -1,6 +1,6 @@
 return {
-  'mawkler/modicator.nvim',
-  dependencies = { 'catppuccin/nvim' },
+  "mawkler/modicator.nvim",
+  dependencies = { "catppuccin/nvim" },
   init = function()
     -- These are required for Modicator to work
     vim.o.cursorline = true

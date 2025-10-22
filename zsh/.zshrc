@@ -40,8 +40,9 @@ alias reload="source ~/.zshrc"
 
 # alias docker="colima"
 
-PSQL_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
-PATH="$PATH:$PSQL_PATH"
+# Temporarily disabled while using 13 for SWM
+#PSQL_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
+#PATH="$PATH:$PSQL_PATH"
 
 alias pn="npx pnpm@9.15.4"
 
@@ -53,3 +54,27 @@ alias lsf="fzf --preview 'bat --style=numbers --color=always {}'"
 
 alias claude-update="npm install -g @anthropic-ai/claude-code"
 
+alias sshp="ssh-add ~/.ssh/id_ed25519"
+alias sshw="ssh-add ~/.ssh/id_ed25519_work"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/rossanderson/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# bun completions
+[ -s "/Users/rossanderson/.bun/_bun" ] && source "/Users/rossanderson/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+### WANEWS ###
+eval "$(jenv init -)"
+eval "$(rbenv init -)"
+export ANDROID_HOME=~/Library/Android/sdk
+PSQL_PATH="/Applications/Postgres.app/Contents/Versions/13/bin"
+PATH="$PATH:$PSQL_PATH"
+### WANEWS ###
+
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
