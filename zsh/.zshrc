@@ -38,6 +38,8 @@ alias tmr="tmux resizep -R"
 
 alias reload="source ~/.zshrc"
 
+alias bp="bat package.json" 
+
 # alias docker="colima"
 
 # Temporarily disabled while using 13 for SWM
